@@ -58,4 +58,4 @@ node {
             'DOCKER_REGISTRY_PWD', usernameVariable: 'DOCKER_REGISTRY_USER')]) {
             sh "./mvnw -ntp jib:build"
     }
-}
+}}
