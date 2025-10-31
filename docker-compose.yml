@@ -1,0 +1,9 @@
+services:
+  mi-jhipster-app:
+    build: .
+    ports:
+      - "8080:8080"
+
+networks:
+  docker-elk_elk:
+    external: true
