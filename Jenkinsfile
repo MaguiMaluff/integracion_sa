@@ -53,9 +53,13 @@ node {
     }
 
     def dockerImage
-    stage('publish docker') {
-        withCredentials([usernamePassword(credentialsId: 'dockerhub-login', passwordVariable:
-            'DOCKER_REGISTRY_PWD', usernameVariable: 'DOCKER_REGISTRY_USER')]) {
-            sh "./mvnw -ntp jib:build"
-    }
-}}
+        stage('publish docker') {
+            withCredentials([usernamePassword(
+            credentialsId: 'dockerhub-login',
+            usernameVariable: 'DOCKER_REGISTRY_USER',
+            passwordVariable: 'DOCKER_REGISTRY_PWD'
+        )]) {
+            sh "./mvnw -ntp -X jib:build -DskipTests"
+
+ }
+}

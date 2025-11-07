@@ -604,7 +604,7 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>${jib-maven-plugin.version}</version>
+                    <version>3.4.5</version>
                     <configuration>
                         <from>
                             <image>${jib-maven-plugin.image}</image>
@@ -616,7 +616,7 @@
                             </platforms>
                         </from>
                         <to>
-                            <image>MaguiMaluff/integracion_sa:latest</image>
+                            <image>maguimalu/integracion_continua_sa:latest</image>
                                 <tags>
                                     <tag>${project.version}</tag>
                                     <tag>latest</tag>
