@@ -61,5 +61,6 @@ node {
         )]) {
             sh "./mvnw -ntp -X jib:build -DskipTests"
 
- }
+        }
+    }
 }
